@@ -528,9 +528,7 @@ a {
     cursor: pointer;
     transition: box-shadow 250ms var(--animation-delay);
 }
-.subscribe-btn:focus{
 
-}
 .icon-sub{
     fill: currentColor;
     margin-left: 16px;
