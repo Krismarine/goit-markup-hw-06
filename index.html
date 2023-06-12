@@ -557,7 +557,8 @@
         </div>
         <div class="container-sub">
           <p class="text-subscribe">Subscribe</p>
-          <label class="sub-label">
+          <form class="sub-form">
+            <label class="sub-label">
             <input 
               type="email"
               class="sub-input"
@@ -571,6 +572,7 @@
                 <use href="./images/icons.svg#icon-Frame3"></use>
               </svg></button
           ></label>
+          </form>
         </div>
       </div>
     </footer>
@@ -583,14 +585,14 @@
         </button>
         <p class="form-title">Leave your contacts and we will call you back</p>
         <form class="form">
-          <div>
-            <label class="modal-cap" for="user_Name">Name</label>
-            <div class="modal-field">
+          <div class="modal-field">
+            <label class="modal-cap" for="user-name">Name</label>
+            <div class="container-input">
               <input
                 type="text"
                 class="modal-input"
-                name="Name"
-                id="user_Name"
+                name="user-name"
+                id="user-name"
                 minlength="2"
                 maxlength="10"
                 title="Stephany"
@@ -602,9 +604,9 @@
             </div>
           </div>
 
-          <div>
+          <div class="modal-field">
             <label class="modal-cap" for="user_Phone">Phone</label>
-            <div class="modal-field">
+            <div class="container-input">
               <input
                 type="tel"
                 class="modal-input"
@@ -619,9 +621,9 @@
               </svg>
             </div>
           </div>
-          <div>
+          <div class="modal-field">
             <label class="modal-cap" for="user_Email">Email</label>
-            <div class="modal-field">
+            <div class="container-input">
               <input
                 type="email"
                 class="modal-input"
@@ -636,25 +638,26 @@
               </svg>
             </div>
           </div>
-          <div>
-            <label class="modal-cap" for="user_Comment">Comment</label>
+          <div class="container-feedback">
+            <label class="modal-cap" for="user_comment">Comment</label>
             <textarea
               class="feedback"
-              name="feedback"
-              id="user_Comment"
+              name="user_comment"
+              id="user_comment"
               placeholder="Text input"
             ></textarea>
           </div>
-          <div class="modal-field">
+          <div class="container-check">
             <input
               class="modal-check visually-hidden"
               type="checkbox"
-              id="privacy"
-              name="privacy"
+              id="user-privacy"
+              name="user-privacy"
               value="true"
+              
             />
-            <label class="text-check" for="privacy">
-              <span>
+            <label class="text-check" for="user-privacy">
+              <span class="vector">
                 <svg class="icon-check" width="10" height="8">
                   <use href="./images/icons.svg#icon-Vector"></use>
                 </svg>

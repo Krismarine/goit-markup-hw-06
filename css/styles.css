@@ -469,8 +469,6 @@ a {
 }
 .container-sub{
     margin-left: 80px;
-  
-  
 }
 .text-subscribe{
     font-weight: 500;
@@ -480,21 +478,24 @@ a {
     color: var(--background-color); 
     margin-bottom: 16px;  
 }
-.sub-label{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.sub-form{
+   display: flex;
+   gap: var(--animation-delay);
 }
+.sub-label{
+   display: flex;
+}
+
 .sub-input{
     Width: 264px;
     Height: 40px;
     background-color: transparent;
     border: 1px solid var(--background-color);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
     border-radius: 4px;
     font-weight: 400;
     font-size: 12px;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
     color: var(--background-color);
     padding-left: 16px;
@@ -503,14 +504,14 @@ a {
 .sub-input::placeholder{
     font-weight: 400;
     font-size: 12px;
-    line-height: 2;
+    line-height: 1.5;
     letter-spacing: 0.04em;
-    color: var(--background-color);
-   
+    color: var(--background-color); 
 }
 .subscribe-btn{
-    width: 165px;
+    min-width: 165px;
     height: 40px;
+    font-family: 'Roboto', sans-serif;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -725,7 +726,7 @@ a {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12), 
     0px 2px 1px rgba(0, 0, 0, 0.2);
-    padding: 24px;
+    padding: 72px 24px 24px 24px;
 
 }
 .close-btn{
@@ -773,11 +774,11 @@ a {
     text-align: center;
     letter-spacing: 0.02em;
     color: var(--title-color);
-    margin-top: 48px;
     margin-bottom: 16px;
 }
 
 .modal-cap{
+    display: block;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -785,6 +786,9 @@ a {
     color: var(--customers-color);
     margin-bottom: 4px;
     
+}
+.container-input{
+    position: relative;
 }
 .modal-input{
     width: 100%;
@@ -798,18 +802,17 @@ a {
     color: var(--title-color);
     padding-left: 38px;
     outline: transparent;
+    background-color: transparent;
     transition: border-color 250ms var(--animation-delay);
 }
 .modal-btn{ 
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
-    text-align: center;
     letter-spacing: 0.04em;
     color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    display: block;
+    text-align: center;
     background-color: var(--primary-brand-color);
     border: none;
     border-radius: 4px;
@@ -817,8 +820,8 @@ a {
     min-width: 169px;
     height: 56px;
     margin: 0 auto;
-    padding: 32px 16px;
     cursor: pointer;
+    transition: background-color 250ms var(--animation-delay);
 }
 .modal-input::placeholder, .feedback::placeholder{
     font-weight: 400;
@@ -830,7 +833,6 @@ a {
 
 }
 .modal-field{
-    position: relative;
     margin-bottom: 8px;
 }
 .modal-icon{
@@ -841,6 +843,9 @@ a {
     fill: currentColor;
     transition: fill 250ms var(--animation-delay);
   
+}
+.container-feedback{
+    margin-bottom: 16px;
 }
 .modal-input:focus{
     border-color: var(--primary-brand-color);
@@ -854,39 +859,41 @@ a {
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 4px;
     outline:transparent;
+    background-color: transparent;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
     letter-spacing: 0.04em;
-    color: var(--title-color);
+    color: rgba(46, 47, 66, 0.4);
     resize: none;
     padding: 8px 16px;
-    margin-bottom: 16px;
     transition: border-color 250ms var(--animation-delay);
 }
 .feedback:focus{
     border-color: var(--primary-brand-color);
 }
+.container-check{
+    margin-bottom: 24px;
+}
 .link-privacy{
     color: var(--primary-brand-color);
     text-decoration: underline;
 }
-.text-check span{
+.vector{
     width: 16px;
     height: 16px;
     border: 1px solid rgba(46, 47, 66, 0.4);
     border-radius: 2px;
     margin-right: 8px;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
     fill: transparent;
     transition: background-color 250ms var(--animation-delay)
+    border 250ms var(--animation-delay)
     fill 250ms var(--animation-delay);
 }
 .text-check{
-    display: flex;
-    align-items: center;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.17;
@@ -895,7 +902,7 @@ a {
     
 }
 .modal-check:checked + .text-check span{
-    background-color: var(--primary-brand-color);
+    background-color: var(--pressed-state-color);
     border: none;
     fill: var(--light-cloud-color);
 }
