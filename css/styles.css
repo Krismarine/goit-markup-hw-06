@@ -480,7 +480,7 @@ a {
 }
 .sub-form{
    display: flex;
-   gap: var(--animation-delay);
+   gap: var(--cards-gap);
 }
 .sub-label{
    display: flex;
@@ -525,7 +525,6 @@ a {
     border-radius: 4px;
     border: none;
     padding: 8px 24px;
-    margin-left: var(--cards-gap);
     cursor: pointer;
     transition: box-shadow 250ms var(--animation-delay);
 }
@@ -889,8 +888,8 @@ a {
     justify-content: center;
     align-items: center;
     fill: transparent;
-    transition: background-color 250ms var(--animation-delay)
-    border 250ms var(--animation-delay)
+    transition: background-color 250ms var(--animation-delay),
+    border 250ms var(--animation-delay),
     fill 250ms var(--animation-delay);
 }
 .text-check{

@@ -555,22 +555,25 @@
             </li>
           </ul>
         </div>
-        <div class="container-sub">
+         <div class="container-sub">
           <p class="text-subscribe">Subscribe</p>
           <form class="sub-form">
             <label class="sub-label">
-              <input
-                type="email"
-                class="sub-input"
-                placeholder="E-mail"
-                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" />
-                </label>
-              <button class="subscribe-btn" type="submit">
-                Subscribe
-                <svg class="icon-sub" width="24" height="24">
-                  <use href="./images/icons.svg#icon-Frame3"></use>
-                </svg></button
-            >
+            <input 
+              name="user-email"
+              type="email"
+              class="sub-input"
+              placeholder="E-mail" 
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"/>
+              </label>
+              <button
+              type="submit"
+              class="subscribe-btn">
+              Subscribe
+              <svg class="icon-sub" width="24" height="24">
+                <use href="./images/icons.svg#icon-Frame3"></use>
+              </svg></button
+          >
           </form>
         </div>
       </div>
@@ -641,8 +644,8 @@
             <label class="modal-cap" for="user_comment">Comment</label>
             <textarea
               class="feedback"
-              name="user_comment"
-              id="user_comment"
+              name="user-comment"
+              id="user-comment"
               placeholder="Text input"
             ></textarea>
           </div>
